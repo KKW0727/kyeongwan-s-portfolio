@@ -195,4 +195,35 @@
     color: var(--color-black);
   }
 
+  /* skill */
+#skills {
+  background-color:var(--color-dark-yellow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill__img{
+  width: 100px;
+  height: 100px;
+}
+.skill {
+  max-width: 720px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-white);
+  padding: 22px;
+  margin-top: 22px;
+  border-radius: var(--size-border-radius);
+}
+.skill__title {
+  margin-bottom: 48px;
+}
+
+.skill__description{
+  color: var(--color-black);
+  margin-bottom: 0;
+}
+
 
