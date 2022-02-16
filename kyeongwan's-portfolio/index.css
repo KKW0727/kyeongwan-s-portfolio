@@ -172,3 +172,27 @@
     transition: all var(--animation-duration-fast) ease-in-out;
   }
 
+   /* about */
+  #about {
+    background-color: var(--color-dark-green);
+    text-align: center;
+  }
+  .about__profiles {
+    max-width: 880px;
+    margin: 0 auto;
+    margin-top: 68px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: var(--color-white);
+  }
+  .about__profile {
+    width: 230px;
+    margin: 22px;
+    text-align: center;
+  }
+  .about__profile__title {
+    color: var(--color-black);
+  }
+
+
