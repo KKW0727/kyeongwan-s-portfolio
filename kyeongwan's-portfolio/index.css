@@ -405,4 +405,101 @@ input, textarea {
   opacity: var(--opacity-light);
 }
 
+/* responsive */
+@media screen and (max-width:768px) {
+  :root {
+      /* Font size */
+      --font-large: 1.875rem;
+      --font-medium:  1.125rem;
+      --font-regular: 1rem;
+      --font-small: 0.875rem;
+      --font-micro: 0.750rem;
+    }
+    p{
+      width: 90%;
+    }
+
+  /* Section common */
+  .section {
+     padding: 50px 30px;
+  }
+
+  /* navbar */
+  .navbar__menu {
+      width: 80%;
+      display: none;
+      margin: 0;
+   } 
+   
+  .navbar__menu__item {
+      font-size: var(--font-small);
+      padding: 0;
+      margin: 0 4px;
+  }
+  
+  .navbar__title {
+      display: block;
+  }
+
+  .navbar__toggle-btn {
+      display: block;
+      cursor: pointer;
+  }
+  
+  .navbar__menu.open {
+      display: flex;
+  }
+
+  .invisible {
+      display: none;
+  }
+
+  /* about */
+  .about__profiles {
+    margin-top: 26px;
+  }
+ 
+  .about__profile {
+    margin: 12px;
+  }
+
+  /* skill */
+  .skill {
+   flex-direction: column;
+  }
+  /*work */
+  .project {
+    margin: 22px auto;
+    width: 100%;
+  }
+  
+  .work__projects {
+    flex-direction: column;
+    margin-top: 34px;
+  }
+  .project__dtl__imgs {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project__dtl__imgs li {
+    width: 60%;
+  }
+  .project__dtl__imgs img {
+    height: 500px;
+  }
+
+  /* project details */
+  .project__dtl__bottom-desktop img{
+    height: 320px;
+  }
+
+  .project__dtl__bottom-mobile img {
+    width: 80%;
+   }
+
+   .project__dtl__close-btn {
+    padding: 12px;
+  }
+}
+
 
