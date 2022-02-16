@@ -19,3 +19,10 @@ document.addEventListener('scroll', () => {
         navbarTitle.classList.add('invisible');
     }
 });
+
+// Expanding navbarMenu when click toogleButton
+navbarToggleBtn.addEventListener('click', () => {
+    navbarTitle.classList.add('invisible');
+    navbarMenu.classList.toggle('open');
+    navbarToggleBtn.classList.toggle('fa-times');
+});
