@@ -32,15 +32,44 @@ navbarMenu.addEventListener('click', (event) => {
     const target = event.target;
     const link = target.dataset.link;
     if (link == null) {
-      return;
+        return;
     }
     navbarTitle.classList.add('invisible');
     navbarMenu.classList.remove('open');
     navbarToggleBtn.classList.remove('fa-times');
     scrollIntoView(link);
-  });
-  
-  function scrollIntoView(selector) {
-      const scrollTo = document.querySelector(selector);
-      scrollTo.scrollIntoView({ behavior: 'smooth'});
-    }
+});
+
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({ behavior: 'smooth' });
+}
+
+//show project detail when click project image
+const projectImgs = document.querySelectorAll('.project__img');
+const projectContainer = document.querySelector('.work__projects');
+const projectsDtl = document.querySelector('.projects__dtl');
+const projectDtl = document.querySelectorAll('.project__dtl');
+const body = document.querySelector('body');
+projectImgs.forEach((projectImg, projectImgIndex) => {
+    projectImg.addEventListener('click', () => {
+        projectContainer.classList.add('anim-out');
+        setTimeout(() => {
+            projectsDtl.classList.add('open');
+            projectDtl[projectImgIndex].classList.add('show');
+            body.style.overflow = 'hidden';
+        }, 500);
+    });
+});
+
+const projectDtlCloseBtns = document.querySelectorAll('.project__dtl__close-btn');
+projectDtlCloseBtns.forEach((projectDtlCloseBtn, projectDtlCloseBtnIndex) => {
+    projectDtlCloseBtn.addEventListener('click', () => {
+        projectsDtl.classList.remove('open');
+        projectDtl[projectDtlCloseBtnIndex].classList.remove('show');
+        body.style.overflow = 'visible';
+        setTimeout(() => {
+            projectContainer.classList.remove('anim-out');
+        }, 500);
+    });
+});
